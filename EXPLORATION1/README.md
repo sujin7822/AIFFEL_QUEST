@@ -184,7 +184,8 @@ Code Peer Review
 - **채점 근거**
 - 프로젝트 1, 2 전체 회고 작성
 - 배운점, 아쉬운점, 느낀점을 포함하여 작성됨
-- !image
+- ![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/122075306/a5ff45c7-e86e-4a60-a359-502e3d1609e6)
+
 
 - [O] **5. 코드가 간결하고 효율적인가요?**
 - 파이썬 스타일 가이드 (PEP8) 를 준수하였는지 확인
@@ -193,7 +194,8 @@ Code Peer Review
 - 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부합니다.
 - **채점 근거**
 - 불필요한 할당이나 중복 없이 잘 작성됨
-- !image
+- ![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/122075306/634b30d8-0298-4c7f-8f30-247ad76233ba)
+
 
 
 # 참고 링크 및 코드 개선
