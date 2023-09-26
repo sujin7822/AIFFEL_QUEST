@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Code Peer Review
 
 # AIFFEL Campus Online Code Peer Review Templete
@@ -44,3 +45,6 @@ Code Peer Review
 # 코드 리뷰 시 참고한 링크가 있다면 링크와 간략한 설명을 첨부합니다.
 # 코드 리뷰를 통해 개선한 코드가 있다면 코드와 간략한 설명을 첨부합니다.
 ```
+=======
+
+>>>>>>> 77f9d91ae26b3400b553aa21b344f234d2e43a99
