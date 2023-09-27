@@ -33,7 +33,7 @@
         # data frame에 저장
         score_df = pd.DataFrame(df, index=['RMSE']).T.sort_values('RMSE', ascending=False)
     ```    
-  - ```
+  - ```python
     #gridsearchcv 실행순서 : 모델 초기화, 학습시키기 -> 모든 파라미터 조합의 실험
     grid_model = GridSearchCV(model, param_grid=param_grid, \
                             scoring='neg_mean_squared_error', \
@@ -57,7 +57,7 @@
 
 - [X] **5. 코드가 간결하고 효율적인가요?**
   - 중요 코드의 함수화가 잘 이루어져 있다.
-  - ```
+  - ```python
     def my_GridSearch(model, train, y, param_grid, verbose=2, n_jobs=5):
       # GridSearchCV 모델로 초기화
       grid_model = GridSearchCV(model, param_grid=param_grid, scoring='neg_mean_squared_error', \
@@ -80,7 +80,7 @@
   
       return results
     ```
-  - ```
+  - ```python
     def save_submission(model, train, y, test, model_name, rmsle=None):
       model.fit(train, y)
       prediction = model.predict(test)
