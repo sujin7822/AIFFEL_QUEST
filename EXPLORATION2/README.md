@@ -11,7 +11,7 @@
 - [X] **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
   - 주석으로 코드 설명이 잘 되어있다.
-  - ```
+  - ``` python
     def get_scores(models, train, y):
     df = {}
     for model in models:
