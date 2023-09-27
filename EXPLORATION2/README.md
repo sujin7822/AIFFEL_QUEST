@@ -13,25 +13,25 @@
   - 주석으로 코드 설명이 잘 되어있다.
   - ```python
     def get_scores(models, train, y):
-      df = {}
-      for model in models:
-          # 모델 이름 획득
-          model_name = model.__class__.__name__
-          # train, test 데이터셋 분리
-          # random_state를 사용하여 고정하고 train과 test 셋의 비율은 8:2로 합니다.
-          X_train, X_test, y_train, y_test = train_test_split(train, y, test_size=0.2, shuffle=True, random_state=34) 
-  
-          # 모델 학습
-          model.fit(X_train, y_train)
-          # 예측
-          y_pred = model.predict(X_test)
-          score_df = pd.DataFrame(df, index=['RMSE']).T.sort_values('RMSE', ascending=False)
-  
-          # 예측 결과의 rmse값 저장
-          df[model_name] = rmse(y_pred, y_test)
-      
-          # data frame에 저장
-          score_df = pd.DataFrame(df, index=['RMSE']).T.sort_values('RMSE', ascending=False)
+        df = {}
+        for model in models:
+            # 모델 이름 획득
+            model_name = model.__class__.__name__
+            # train, test 데이터셋 분리
+            # random_state를 사용하여 고정하고 train과 test 셋의 비율은 8:2로 합니다.
+            X_train, X_test, y_train, y_test = train_test_split(train, y, test_size=0.2, shuffle=True, random_state=34) 
+    
+            # 모델 학습
+            model.fit(X_train, y_train)
+            # 예측
+            y_pred = model.predict(X_test)
+            score_df = pd.DataFrame(df, index=['RMSE']).T.sort_values('RMSE', ascending=False)
+    
+            # 예측 결과의 rmse값 저장
+            df[model_name] = rmse(y_pred, y_test)
+        
+            # data frame에 저장
+            score_df = pd.DataFrame(df, index=['RMSE']).T.sort_values('RMSE', ascending=False)
     ```    
   - ```python
     #gridsearchcv 실행순서 : 모델 초기화, 학습시키기 -> 모든 파라미터 조합의 실험
