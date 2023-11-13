@@ -4,41 +4,162 @@
 
 
 # PRT(Peer Review Template)
-- [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
-    - 문제에서 요구하는 최종 결과물이 첨부되었는지 확인
-    - 문제를 해결하는 완성된 코드란 프로젝트 루브릭 3개 중 2개, 
-    퀘스트 문제 요구조건 등을 지칭
-        - 해당 조건을 만족하는 코드를 캡쳐해 근거로 첨부
-    
-- [ ]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
+- [x]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
+
+| 평가문항                                                         | 상세기준                                                                                                                                | 달성여부 |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| 1. CAM을 얻기 위한 기본모델의 구성과 학습이 정상 진행되었는가?   | ResNet50 + GAP + DenseLayer 결합된 CAM 모델의 학습과정이 안정적으로 수렴하였다.                                                         | o         |
+| 2. 분류근거를 설명 가능한 Class activation map을 얻을 수 있는가? | CAM 방식과 Grad-CAM 방식의 class activation map이 정상적으로 얻어지며, 시각화하였을 때 해당 object의 주요 특징 위치를 잘 반영한다.      | o         |
+| 3. 인식결과의 시각화 및 성능 분석을 적절히 수행하였는가?         | CAM과 Grad-CAM 각각에 대해 원본이미지합성, 바운딩박스, IoU 계산 과정을 통해 CAM과 Grad-CAM의 object localization 성능이 비교분석되었다. | o         |
+
+- CAM 결과   
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/25910479-5ec5-4f7b-9ca3-c89d56243c14)
+
+- CAM vs Grad-CAM   
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/dfb93232-fe19-44aa-aede-69ad4b065b74)
+
+
+
+---
+
+- [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
-    - 해당 코드 블럭에 doc string/annotation이 달려 있는지 확인
-    - 해당 코드가 무슨 기능을 하는지, 왜 그렇게 짜여진건지, 작동 메커니즘이 뭔지 기술.
-    - 주석을 보고 코드 이해가 잘 되었는지 확인
-        - 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부합니다.
-        
-- [ ]  **3. 에러가 난 부분을 디버깅하여 문제를 “해결한 기록을 남겼거나” 
+
+- image histogram    
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/6c9e3a8a-08d5-49a9-a0ad-fe37d948502c)
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/1f310100-ae33-4405-9b80-c1255409ca63)
+
+
+---
+
+- [x]  **3. 에러가 난 부분을 디버깅하여 문제를 “해결한 기록을 남겼거나” 
 ”새로운 시도 또는 추가 실험을 수행”해봤나요?**
-    - 문제 원인 및 해결 과정을 잘 기록하였는지 확인
-    - 문제에서 요구하는 조건에 더해 추가적으로 수행한 나만의 시도, 
-    실험이 기록되어 있는지 확인
-        - 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부합니다.
-        
-- [ ]  **4. 회고를 잘 작성했나요?**
-    - 주어진 문제를 해결하는 완성된 코드 내지 프로젝트 결과물에 대해
-    배운점과 아쉬운점, 느낀점 등이 기록되어 있는지 확인
-    - 전체 코드 실행 플로우를 그래프로 그려서 이해를 돕고 있는지 확인
-        - 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부합니다.
-        
-- [ ]  **5. 코드가 간결하고 효율적인가요?**
-    - 파이썬 스타일 가이드 (PEP8) 를 준수하였는지 확인
-    - 하드코딩을 하지않고 함수화, 모듈화가 가능한 부분은 함수를 만들거나 클래스로 짰는지
-    - 코드 중복을 최소화하고 범용적으로 사용할 수 있도록 함수화했는지
-        - 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부합니다.
+
+- threshold 변화에 따른 boundingbox 변화     
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/e55056f9-e3af-45eb-b560-8ec0eeb52df9)
 
 
-# 참고 링크 및 코드 개선
-```
-# 코드 리뷰 시 참고한 링크가 있다면 링크와 간략한 설명을 첨부합니다.
-# 코드 리뷰를 통해 개선한 코드가 있다면 코드와 간략한 설명을 첨부합니다.
+
+---
+        
+- [x]  **4. 회고를 잘 작성했나요?**
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/002d0b82-eda6-48bc-bd9f-1ef2d140ec2e)
+
+
+
+
+
+---
+        
+- [x]  **5. 코드가 간결하고 효율적인가요?**
+
+- 전체적으로 for문을 활용해 코드 중복을 방지함   
+![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/c6d29ce9-1744-4a2a-a8df-9764b385f876)
+
+
+
+
+
+
+---
+
+수고하셨습니다!!  
+실험에 따라 모델 학습시 참고할만한 코드입니다.!
+```python
+# 사용하는 함수들 정의해놓기
+import pandas as pd
+
+# 모델이름에서 히스토리 추출하는 함수
+def get_history_from_path(path):
+    epoch = []
+    loss = []
+    accuracy = []
+    val_loss = []
+    val_accuracy = []
+    paths = []
+
+    for i in os.listdir(path):
+        if '.h5' in i:
+            result = i[4:-3].split('-')
+
+            epoch.append(float(i[:2]))
+            loss.append(float(result[0]))
+            accuracy.append(float(result[1]))
+            val_loss.append(float(result[2]))
+            val_accuracy.append(float(result[3]))
+            paths.append(i)
+
+    history = pd.DataFrame()
+    history['path'] = paths
+    history['epoch'] = epoch
+    history['loss'] = loss
+    history['accuracy'] = accuracy
+    history['val_loss'] = val_loss
+    history['val_accuracy'] = val_accuracy
+
+    history.sort_values(by='epoch', inplace=True)
+    
+    history.reset_index(inplace=True, drop=True)
+    
+    return history
+
+import matplotlib.pyplot as plt
+
+def plot_history(history):
+    loss = history['loss']
+    val_loss = history['val_loss']
+
+    epochs = range(1, len(loss) + 1)
+    fig = plt.figure(figsize=(12, 5))
+
+    ax1 = fig.add_subplot(1, 2, 1)
+    ax1.plot(epochs, loss, 'b-', label='train_loss')
+    ax1.plot(epochs, val_loss, 'r-', label='val_loss')
+    ax1.set_title('Train and Validation Loss')
+    ax1.set_xlabel('Epochs')
+    ax1.set_ylabel('Loss')
+    ax1.grid()
+    ax1.legend()
+
+    accuracy = history['accuracy']
+    val_accuracy = history['val_accuracy']
+
+    ax2 = fig.add_subplot(1, 2, 2)
+    ax2.plot(epochs, accuracy, 'b-', label='train_accuracy')
+    ax2.plot(epochs, val_accuracy, 'r-', label='val_accuracy')
+    ax2.set_title('Train and Validation Accuracy')
+    ax2.set_xlabel('Epochs')
+    ax2.set_ylabel('Accuracy')
+    ax2.grid()
+    ax2.legend()
+
+    plt.show()
+    
+from keras.callbacks import Callback
+import os
+
+class SaveModelEveryEpoch(Callback):
+    def __init__(self, save_path, first_epoch=1):
+        super(SaveModelEveryEpoch, self).__init__()
+        self.save_path = save_path  # Path where you want to save the models
+        self.first_epoch = first_epoch
+        
+    def on_epoch_end(self, epoch, logs=None):
+        file_name = "{}--{:.4f}-{:.4f}-{:.4f}-{:.4f}.h5".format(self.first_epoch + epoch,
+                                                                logs['loss'],
+                                                                logs['accuracy'],
+                                                                logs['val_loss'],
+                                                                logs['val_accuracy'])
+        model_save_path = os.path.join(self.save_path, file_name)
+        
+        self.model.save(model_save_path)
+#         print(f'Model saved to {model_save_path}')
+        
+    def get_config(self):
+        config = super(SaveModelEveryEpoch, self).get_config()
+        config.update({'save_path': self.save_path, 'first_epoch': self.first_epoch})
+        return config
+
+
+
 ```
