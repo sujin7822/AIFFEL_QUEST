@@ -18,6 +18,11 @@
      - 2번 루브릭
      ![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/699a1112-cfb0-4789-9164-40b18615ee6a)
 
+     - 3번 루브릭
+       - U-Net IoU  
+         ![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/29cb7f7a-a27d-4cb5-8d88-ce656aeffdea)
+       - U-Net++ IoU  
+         ![image](https://github.com/sujin7822/AIFFEL_QUEST/assets/68997408/7caa9308-3660-4b56-8c5c-41ca87c42c1a)
 
 - [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
      >코드마다 주석이 잘 붙어있어 이 코드가 어떤 코드인지 이해하기 쉽습니다.
